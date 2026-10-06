@@ -1,0 +1,17 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh;padding:40px 15px}
+.container{max-width:650px;margin:auto;background:white;padding:30px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.2);animation:slideUp .6s ease}
+header{text-align:center} header h1{margin-bottom:8px} header p{color:#777}
+.task-input{display:flex;gap:10px;margin-top:25px}
+input{padding:14px;border:1px solid #ddd;border-radius:10px;outline:none}
+#taskInput{flex:1}
+button{border:0;padding:14px 20px;border-radius:10px;background:#667eea;color:white;cursor:pointer;font-weight:bold}
+button:hover{transform:translateY(-2px)}
+.search{width:100%;margin-top:15px}
+.task{margin-top:15px;padding:15px;background:#f5f6fa;border-radius:12px;display:flex;justify-content:space-between;align-items:center;animation:fadeIn .3s ease}
+.task.completed span{text-decoration:line-through;color:#888}
+.actions button{margin-left:5px;padding:8px 12px}
+.delete{background:#e74c3c}.complete{background:#27ae60}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+@media(max-width:600px){.task-input{flex-direction:column}.task{flex-direction:column;gap:12px;align-items:flex-start}}
